@@ -28,6 +28,7 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -105,7 +106,7 @@ img {
   max-width: 100vw;
   min-height: 100svh;
   margin: 0 auto;
-  padding: calc(8px + var(--safe-top)) 16px calc(20px + var(--safe-bottom));
+  padding: calc(18px + var(--safe-top)) 16px calc(20px + var(--safe-bottom));
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
@@ -243,19 +244,20 @@ html.is-ios:not(.is-installed) .ios-install:not(.is-hidden) {
 .logo-stage {
   position: relative;
   width: 280px;
-  height: 268px;
-  margin: -6px 0 4px;
+  height: 318px;
+  margin: 4px 0 6px;
   display: grid;
   place-items: center;
   perspective: 900px;
   overflow: visible;
+  padding-top: 42px;
 }
 
 .logo-glow {
   position: absolute;
   width: 186px;
   height: 50px;
-  bottom: 20px;
+  bottom: 28px;
   border-radius: 50%;
   background: rgba(20, 8, 4, 0.45);
   filter: blur(10px);
@@ -316,6 +318,52 @@ html.is-ios:not(.is-installed) .ios-install:not(.is-hidden) {
 .smoke span:nth-child(5) { --drift: 18px; }
 .smoke span:nth-child(6) { --drift: -8px; }
 
+.logo-stage .smoke {
+  top: 28px;
+  width: 250px;
+  height: 210px;
+  z-index: 2;
+}
+
+.logo-stage .smoke span {
+  width: 48px;
+  height: 48px;
+  filter: blur(6px);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.78) 0%, rgba(235, 235, 235, 0.32) 38%, transparent 70%);
+  animation-name: puff-logo;
+  animation-duration: 4.6s;
+}
+
+.logo-stage .smoke span:nth-child(1) { left: 18%; animation-delay: 0s; --drift: -22px; }
+.logo-stage .smoke span:nth-child(2) { left: 34%; width: 62px; height: 62px; animation-delay: 0.35s; --drift: 10px; }
+.logo-stage .smoke span:nth-child(3) { left: 48%; width: 54px; height: 54px; animation-delay: 0.7s; --drift: 18px; }
+.logo-stage .smoke span:nth-child(4) { left: 26%; width: 36px; height: 36px; animation-delay: 1.05s; --drift: -12px; }
+.logo-stage .smoke span:nth-child(5) { left: 56%; width: 58px; height: 58px; animation-delay: 1.4s; --drift: 16px; }
+.logo-stage .smoke span:nth-child(6) { left: 40%; width: 44px; height: 44px; animation-delay: 1.75s; --drift: -8px; }
+.logo-stage .smoke span:nth-child(7) { left: 14%; width: 40px; height: 40px; animation-delay: 2.1s; --drift: -26px; }
+.logo-stage .smoke span:nth-child(8) { left: 64%; width: 50px; height: 50px; animation-delay: 2.45s; --drift: 24px; }
+.logo-stage .smoke span:nth-child(9) { left: 30%; width: 32px; height: 32px; animation-delay: 2.8s; --drift: 8px; }
+.logo-stage .smoke span:nth-child(10) { left: 50%; width: 70px; height: 70px; animation-delay: 3.15s; --drift: -4px; }
+.logo-stage .smoke span:nth-child(11) { left: 22%; width: 56px; height: 56px; animation-delay: 3.5s; --drift: -16px; }
+.logo-stage .smoke span:nth-child(12) { left: 60%; width: 38px; height: 38px; animation-delay: 3.85s; --drift: 14px; }
+
+@keyframes puff-logo {
+  0% {
+    opacity: 0;
+    transform: translate(0, 36px) scale(0.45);
+  }
+  12% {
+    opacity: 0.95;
+  }
+  48% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift, 16px), -118px) scale(2.05);
+  }
+}
+
 .logo-wrap {
   position: relative;
   z-index: 1;
@@ -325,7 +373,7 @@ html.is-ios:not(.is-installed) .ios-install:not(.is-hidden) {
   overflow: hidden;
   background: #000;
   border: 3px solid #fff4dc;
-  transform: translateY(-18px) rotateX(12deg) scale(1.08);
+  transform: translateY(8px) rotateX(12deg) scale(1.06);
   transform-origin: center bottom;
   box-shadow:
     0 0 0 2px rgba(255, 204, 34, 0.45),
@@ -345,10 +393,10 @@ html.is-ios:not(.is-installed) .ios-install:not(.is-hidden) {
 @keyframes emerge {
   0%,
   100% {
-    transform: translateY(-14px) rotateX(10deg) scale(1.06);
+    transform: translateY(10px) rotateX(11deg) scale(1.05);
   }
   50% {
-    transform: translateY(-26px) rotateX(6deg) scale(1.1);
+    transform: translateY(-6px) rotateX(6deg) scale(1.09);
   }
 }
 
@@ -367,12 +415,42 @@ html.is-ios:not(.is-installed) .ios-install:not(.is-hidden) {
   font-weight: 500;
 }
 
+.home-header .hours {
+  margin-top: 0;
+}
+
+.home-header .hours-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.home-header .hours-time {
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.home-header .hours-days {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.home-header .hours-closed {
+  margin-top: 3px;
+  font-size: 0.88rem;
+}
+
 .divider {
   width: 84px;
   height: 3px;
-  margin: 16px auto 32px;
+  margin: 14px auto;
   border-radius: 99px;
   background: linear-gradient(90deg, var(--red), var(--fire), var(--flame));
+}
+
+.home-header .divider:last-of-type {
+  margin-bottom: 32px;
 }
 
 .category-grid {
@@ -963,12 +1041,43 @@ html.is-ios:not(.is-installed) .ios-install:not(.is-hidden) {
   opacity: 0.7;
 }
 
-.address-label {
+.hours {
   margin-top: 22px;
+}
+
+.hours-label,
+.address-label {
   color: var(--cream);
   font-size: 1.28rem;
   font-weight: 700;
   letter-spacing: -0.03em;
+}
+
+.hours-time {
+  margin-top: 8px;
+  color: var(--gold);
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.hours-days {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.hours-closed {
+  margin-top: 4px;
+  color: #ffb4a8;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.address-label {
+  margin-top: 22px;
 }
 
 .address-link {
@@ -1024,7 +1133,7 @@ html.is-ios:not(.is-installed) .ios-install:not(.is-hidden) {
   }
 
   .logo-wrap {
-    transform: translateY(-12px) rotateX(8deg) scale(1.06);
+    transform: translateY(6px) rotateX(8deg) scale(1.05);
   }
 
   .smoke {

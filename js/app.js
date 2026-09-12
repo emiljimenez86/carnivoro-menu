@@ -143,8 +143,9 @@ function renderHome() {
       <div class="logo-stage">
         <div class="logo-glow" aria-hidden="true"></div>
         <div class="smoke" aria-hidden="true">
-          <span></span><span></span><span></span>
-          <span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
         </div>
         <div class="logo-wrap">
           <img src="image/logo.jpeg" alt="Logo de Carnívoro" />
@@ -152,6 +153,13 @@ function renderHome() {
       </div>
       <p class="kicker">Menú digital</p>
       <p class="tagline">${menuData.tagline}</p>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="hours">
+        <p class="hours-label">${contactData.hours.label}</p>
+        <p class="hours-time">${contactData.hours.time}</p>
+        <p class="hours-days">${contactData.hours.days}</p>
+        <p class="hours-closed">${contactData.hours.closed}</p>
+      </div>
       <div class="divider" aria-hidden="true"></div>
     </header>
     <section class="category-grid" aria-label="Menú">${cards}</section>

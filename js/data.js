@@ -7,7 +7,7 @@ const menuData = {
       name: "Carnes a la Parrilla",
       short: "Incluye acompañamientos",
       accent: "fire",
-      note: "Patacón, guacamole y papa cocida.<br>Ensalada y salsas de la casa.",
+      note: "Patacón, guacamole, papa, yuca y&nbsp;ensalada.<br>Salsas de la casa y chimichurri.",
       items: [
         { name: "Chuleta", price: 32000 },
         { name: "Costilla", price: 37000 },
@@ -21,6 +21,7 @@ const menuData = {
       name: "Pinchos",
       short: "Res, cerdo o mixto",
       accent: "gold",
+      note: "Papa, patacones, guacamole y ensalada.",
       items: [
         { name: "Pincho de res", price: 23000 },
         { name: "Pincho de cerdo", price: 23000 },
@@ -32,11 +33,11 @@ const menuData = {
       name: "Chuzo de pollo",
       short: "Con tocineta",
       accent: "red",
+      note: "Papa, patacones, ensalada y guacamole.",
       items: [
         {
           name: "Chuzo de pollo con tocineta",
           price: 23000,
-          description: "Patacón · Guacamole · Ensalada · Papa cocida",
         },
       ],
     },
@@ -45,6 +46,7 @@ const menuData = {
       name: "Chorizos",
       short: "Seis variedades",
       accent: "brown",
+      note: "Patacón, ensalada y guacamole.",
       items: [
         { name: "Chorizo de chicharrón", price: 18000 },
         { name: "Chorizo llanero", price: 18000 },
@@ -91,6 +93,12 @@ const menuData = {
 
 const contactData = {
   title: "Contáctanos",
+  hours: {
+    label: "Horario de atención",
+    time: "6:00 p.m. a 11:00 p.m.",
+    days: "Lunes, martes, jueves, viernes, sábado y domingo",
+    closed: "Cerrado los miércoles",
+  },
   address: {
     label: "Nuestra dirección",
     lines: [
