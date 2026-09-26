@@ -10,10 +10,10 @@ const menuData = {
       note: "Patacón, guacamole, papa, yuca y&nbsp;ensalada.<br>Salsas de la casa y chimichurri.",
       items: [
         { name: "Chuleta", price: 32000 },
-        { name: "Costilla", price: 37000 },
-        { name: "Churrasco", price: 38000 },
-        { name: "Punta", price: 40000 },
-        { name: "Solomito", price: 37000 },
+        { name: "Costilla", price: 38000 },
+        { name: "Churrasco", price: 40000 },
+        { name: "Punta", price: 42000 },
+        { name: "Solomito", price: 40000 },
       ],
     },
     {
@@ -23,9 +23,9 @@ const menuData = {
       accent: "gold",
       note: "Papa, patacones, guacamole y ensalada.",
       items: [
-        { name: "Pincho de res", price: 23000 },
-        { name: "Pincho de cerdo", price: 23000 },
-        { name: "Pincho mixto", price: 23000 },
+        { name: "Pincho de res", price: 25000 },
+        { name: "Pincho de cerdo", price: 25000 },
+        { name: "Pincho mixto", price: 25000 },
       ],
     },
     {
@@ -37,7 +37,7 @@ const menuData = {
       items: [
         {
           name: "Chuzo de pollo con tocineta",
-          price: 23000,
+          price: 22000,
         },
       ],
     },

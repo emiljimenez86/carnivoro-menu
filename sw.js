@@ -1,4 +1,4 @@
-const CACHE_NAME = "carnivoro-menu-v11";
+const CACHE_NAME = "carnivoro-menu-v12";
 const urlsToCache = [
   "./index.html",
   "./css/styles.css",
