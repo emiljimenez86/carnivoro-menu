@@ -11,8 +11,8 @@ const menuData = {
       items: [
         { name: "Chuleta", price: 32000 },
         { name: "Costilla", price: 38000 },
-        { name: "Churrasco", price: 40000 },
-        { name: "Punta", price: 42000 },
+        { name: "Churrasco", price: 39000 },
+        { name: "Punta", price: 40000 },
         { name: "Solomito", price: 40000 },
       ],
     },
